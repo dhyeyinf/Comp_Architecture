@@ -1,0 +1,41 @@
+in concat.txt:
+The issue is likely due to the newline character that gets included when the user presses "Enter" after typing the input. The MIPS syscall 8 for reading strings doesn't automatically remove the newline (\n), which is added at the end of the string. This extra character causes the palindrome check to fail because "radar\n" is not the same as "radar".
+
+
+in size.txt:
+The issue arises because when the user enters a string, the newline character (\n) is included in the input, and that extra character is being counted. so count was 1 more than the actual length.
+
+in reverse.txt:
+It seems that the issue arises because the loop condition isn't properly handling the case where the string is very short (or even empty).
+
+Enter a string: dhyey
+
+yeey
+
+explanation-It seems the issue arises because the reversed string is being written into the same space where the input string was initially stored, causing partial overwriting. To fix this, we need to store the reversed string in a separate buffer.
+
+Enter a string: dhyey
+
+yeyh
+
+explanation-The issue seems to be with the loop's exit condition. The current logic is stopping one iteration too early, which causes the first character of the original string to be skipped.
+
+To fix this, we should allow the loop to continue until we process the first character of the input string as well.
+
+
+in palindrome.txt:
+
+Enter a string: radar
+NP
+
+-- program is finished running --
+
+Enter a string: hello
+NP
+
+-- program is finished running --
+
+The issue is likely due to the newline character that gets included when the user presses "Enter" after typing the input. The MIPS syscall 8 for reading strings doesn't automatically remove the newline (\n), which is added at the end of the string. This extra character causes the palindrome check to fail because "radar\n" is not the same as "radar".
+
+To fix this, we need to remove the newline character after the user input is captured. Here's the updated version of the code, which removes the newline before performing the palindrome check.
+
