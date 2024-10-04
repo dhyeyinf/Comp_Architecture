@@ -1,0 +1,22 @@
+# started on Sun Aug 18 19:43:33 2024
+
+
+ Performance counter stats for './B22EE024_NEW':
+
+            411.07 msec task-clock                       #    0.997 CPUs utilized             
+                 2      context-switches                 #    4.865 /sec                      
+                 1      cpu-migrations                   #    2.433 /sec                      
+                73      page-faults                      #  177.585 /sec                      
+        1746945076      cycles                           #    4.250 GHz                         (59.13%)
+          35530577      stalled-cycles-frontend          #    2.03% frontend cycles idle        (59.88%)
+        4312074188      instructions                     #    2.47  insn per cycle            
+                                                  #    0.01  stalled cycles per insn     (60.86%)
+         616022963      branches                         #    1.499 G/sec                       (60.55%)
+           5550725      branch-misses                    #    0.90% of all branches             (59.58%)
+
+       0.412235896 seconds time elapsed
+
+       0.408745000 seconds user
+       0.004007000 seconds sys
+
+
